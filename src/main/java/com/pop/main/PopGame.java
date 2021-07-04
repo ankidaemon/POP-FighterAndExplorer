@@ -57,7 +57,7 @@ public class PopGame {
 				play();
 				Store.save(player);
 			}else{
-				return;
+				loadMenu();
 			}
 			return;
 		case 3:

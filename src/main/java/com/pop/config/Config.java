@@ -2,7 +2,6 @@ package com.pop.config;
 
 import java.util.Collections;
 import java.util.Enumeration;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Properties;
 import java.util.Set;
@@ -14,7 +13,7 @@ public class Config extends Properties{
 
 	private static final long serialVersionUID = 5394267685218407628L;
 	
-	private final HashSet<Object> keys = new LinkedHashSet<Object>();
+	private final Set<Object> keys = new LinkedHashSet<Object>();
 		
 	private static final String PATH="/template.properties";
 	
@@ -44,7 +43,7 @@ public class Config extends Properties{
     }
 
 	@Override
-    public Object put(Object key, Object value) {
+    public synchronized Object put(Object key, Object value) {
         keys.add(key);
         return super.put(key, value);
     }
