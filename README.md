@@ -1,3 +1,6 @@
+--- #Update: This repo is deprecated, wrote long time ago.
+
+
 # POP-FighterAndExplorer
 Prince of Persia - Text based Fighting and exploring game
 
